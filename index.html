@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Basket Subscribe Example</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="basket-example.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Basket Example</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Subscribe</h1>
+
+        <div class="newsletter" id="newsletter_wrap">
+            <form id="newsletter_form" name="newsletter_form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+                <input type="hidden" id="fmt" name="fmt" value="H">
+                <input type="hidden" id="newsletters" name="newsletters" value="mozilla-and-you">
+
+                <div id="newsletter_errors" class="newsletter_errors"></div>
+
+                <div id="newsletter_email" class="form_group">
+                    <label for="email" class="form_label">E-mail</label>
+                    <input type="email" id="email" name="email" class="form_input" required placeholder="you@example.com" size="30">
+                </div>
+
+                <div id="newsletter_privacy" class="form_group form_group-agree">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">
+                        I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                    </label>
+                </div>
+                <div id="newsletter_submit">
+                    <button id="newsletter_submit" type="submit" class="btn btn-success">Sign up now</button>
+                </div>
+            </form>
+            <div id="newsletter_thanks" class="newsletter_thanks">
+                <h2>Thanks!</h2>
+                <p>
+                    If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so.
+                    Please check your inbox or your spam filter for an email from us.
+                </p>
+            </div>
+        </div>
+      </div>
+
+
+    <script src="basket-client.js"></script>
+  </body>
+</html>
