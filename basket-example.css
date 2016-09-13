@@ -43,20 +43,8 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
-  text-align: center;
+  text-align: left;
   border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -78,12 +66,20 @@ body {
   }
 }
 
+form ul {
+    list-style: none;
+}
+form ul li {
+    padding: 10px;
+}
+
 .newsletter_errors {
     display: none; /* hide by default */
-    margin-bottom: $grid-gutter-width;
+    margin-bottom: 20px;
     box-shadow: 0 0 0 1px #ffffff; // incase it's on a black background
-    padding: $grid-gutter-width;
+    padding: 20px;
     background-color: rgba(0, 0, 0, 0.1); // incase it's on a white background
+    border: 1px solid #c00;
 
 }
 
@@ -93,4 +89,67 @@ body {
 
 .newsletter_thanks {
     display: none;
+}
+
+.form_group {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.form_group-agree{
+    padding-left: 1.5em; // roughly width of a checkbox
+    text-indent: -1.5em;
+}
+
+.form_label {
+    display: block;
+}
+
+.form_label-inline {
+    display: inline-block;
+}
+
+.form_input {
+    box-shadow: inset 5px 5px 5px 0px rgba(0, 0, 0, 0.05);
+    border: 3px solid #D9D9D9;
+    background-color: #fff;
+}
+
+button,
+input:not([type=radio]):not([type=checkbox])  {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 100%;
+    padding: 12px 15px;
+    font-family: inherit;
+    line-height: 1; // IE can't handle any other value, must compensation with padding
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner {
+    padding: 0 !important;
+    border: 0 none !important;
+    cursor: pointer;
+}
+
+$placeholder-color = #B1B1B1;
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #B1B1B1;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #B1B1B1;
+  color: $placeholder-color;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #B1B1B1;
+  color: $placeholder-color;
+}
+::placeholder {
+  color: #B1B1B1;
 }
