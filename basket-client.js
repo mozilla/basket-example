@@ -52,7 +52,9 @@
         // new submission, clear old errors
         errorArray = [];
         newsletterErrors.style.display = 'none';
-        while (newsletterErrors.firstChild) newsletterErrors.removeChild(newsletterErrors.firstChild);
+        while (newsletterErrors.firstChild) {
+            newsletterErrors.removeChild(newsletterErrors.firstChild);
+        }
 
         var fmt = document.getElementById('fmt').value;
         var email = document.getElementById('email').value;
@@ -69,7 +71,7 @@
         xhr.onload = function(r) {
             if (r.target.status >= 200 && r.target.status < 300) {
                 // response is null if handled by service worker
-                if(response === null ) {
+                if(response === null) {
                     newsletterError(new Error());
                     return;
                 }
@@ -77,8 +79,7 @@
                 if (response.success === true) {
                     newsletterForm.style.display = 'none';
                     newsletterThanks();
-                }
-                else {
+                } else {
                     if(response.errors) {
                         for (var i = 0; i < response.errors.length; i++) {
                             errorArray.push(response.errors[i]);
@@ -86,8 +87,7 @@
                     }
                     newsletterError(new Error());
                 }
-            }
-            else {
+            } else {
                 newsletterError(new Error());
             }
         };
