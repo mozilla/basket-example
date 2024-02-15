@@ -1,4 +1,10 @@
-# Basket Example Code
+# This repo is outdated
+
+Mozilla's Protocol design system now features a [newsletter component](https://protocol.mozilla.org/components/detail/newsletter--default) 
+that encompasses all the necessary code for handling newsletter subscriptions via Basket. The example code in this repo is 
+outdated and should no longer be used.
+
+## Basket Example Code
 
 Sample code for newsletter subscriptions via basket.mozilla.org. See it in action at https://mozilla.github.io/basket-example/.
 
